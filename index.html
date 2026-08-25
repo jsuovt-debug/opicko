@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>OPICKO Australia — Wear Loud</title>
+    <link rel="preload" as="image" href="assets/img/hero/hero-desktop.jpg">
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+
+    <!-- icon sprite -->
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+        style="position:absolute;width:0;height:0;overflow:hidden">
+        <symbol id="i-search" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="7" />
+            <path d="m20 20-3.5-3.5" />
+        </symbol>
+        <symbol id="i-user" viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="4" />
+            <path d="M4 20c1.5-4 5-6 8-6s6.5 2 8 6" />
+        </symbol>
+        <symbol id="i-heart" viewBox="0 0 24 24">
+            <path d="M12 20s-7-4.5-9-9c-1.5-3.5 1-8 5-8 2 0 3 1 4 2.5C13 4 14 3 16 3c4 0 6.5 4.5 5 8-2 4.5-9 9-9 9z" />
+        </symbol>
+        <symbol id="i-bag" viewBox="0 0 24 24">
+            <path d="M6 8h12l-1 12H7L6 8z" />
+            <path d="M9 8V6a3 3 0 0 1 6 0v2" />
+        </symbol>
+        <symbol id="i-arrow" viewBox="0 0 24 24">
+            <path d="M5 12h14m-6-6 6 6-6 6" />
+        </symbol>
+        <symbol id="i-lock" viewBox="0 0 24 24">
+            <rect x="5" y="11" width="14" height="9" rx="1" />
+            <path d="M8 11V8a4 4 0 0 1 8 0v3" />
+        </symbol>
+        <symbol id="i-truck" viewBox="0 0 24 24">
+            <path d="M1 7h12v9H1z" />
+            <path d="M13 10h5l3 3v3h-8" />
+            <circle cx="6" cy="18" r="1.6" />
+            <circle cx="17" cy="18" r="1.6" />
+        </symbol>
+        <symbol id="i-ret" viewBox="0 0 24 24">
+            <path d="M3 12a9 9 0 1 0 3-6.7" />
+            <path d="M3 4v5h5" />
+        </symbol>
+        <symbol id="i-bolt" viewBox="0 0 24 24">
+            <path d="M13 2 4 14h6l-1 8 9-12h-6z" />
+        </symbol>
+        <symbol id="i-star" viewBox="0 0 24 24">
+            <path d="m12 3 9 5-9 5-9-5z" />
+            <path d="m3 13 9 5 9-5" />
+        </symbol>
+        <symbol id="i-ruler" viewBox="0 0 24 24">
+            <rect x="3" y="9" width="18" height="6" rx="1" />
+            <path d="M7 9v3m4-3v3m4-3v3" />
+        </symbol>
+        <symbol id="i-aus" viewBox="0 0 24 24">
+            <path d="m12 2 2.4 6.9H21l-5.6 4.2 2.1 7L12 15.8 6.5 20l2.1-7L3 8.9h6.6z" />
+        </symbol>
+    </svg>
+
+    <!-- 0 · announcement -->
+    <div id="opk-marquee" class="opk-marquee" aria-hidden="true">
+        <div class="opk-marquee__track"></div>
+    </div>
+
+    <!-- 1 · header -->
+    <header id="opk-header" class="opk-header">
+        <div class="wrap opk-header__in">
+            <button class="opk-burger" aria-label="Menu"><svg class="ic">
+                    <path d="M4 7h16M4 12h16M4 17h16" />
+                </svg></button>
+            <a class="opk-header__logo" href="#">Opicko<span>Australia</span></a>
+            <nav class="opk-nav" id="opkNav">
+                <a href="#opk-newin">New In</a><a href="#opk-cats">T-Shirts</a><a href="#opk-cats">Hoodies</a>
+                <a href="#opk-collections">Collections</a><a class="is-hot" href="#opk-drop">Drop 02</a>
+            </nav>
+            <div class="opk-header__acts">
+                <button id="opkSearchBtn" aria-label="Search"><svg class="ic">
+                        <use href="#i-search" />
+                    </svg></button>
+                <button aria-label="Account"><svg class="ic">
+                        <use href="#i-user" />
+                    </svg></button>
+                <button id="opkBagBtn" class="opk-header__bag" aria-label="Bag"><svg class="ic">
+                        <use href="#i-bag" />
+                    </svg><b id="bagCount">0</b></button>
+            </div>
+        </div>
+        <div class="opk-search"><input type="search" placeholder="Search drops, tees, hoodies…"></div>
+    </header>
+
+    <main>
+        <!-- 2 · hero -->
+        <section id="opk-hero" class="opk-hero">
+            <picture>
+                <source media="(max-width:767px)" srcset="assets/img/hero/hero-mobile.jpg">
+                <img src="assets/img/hero/hero-desktop.jpg" alt="Red muscle car on an Australian coastal road"
+                    fetchpriority="high">
+            </picture>
+            <div class="wrap opk-hero__in">
+                <span class="eyebrow">Drop 01 — Live Now</span>
+                <h1>Wear <i>Loud.</i></h1>
+                <p class="sub">Premium oversized streetwear. Designed in Australia. Stocked in Australia. Built for the
+                    everyday.</p>
+                <div class="opk-hero__ctas">
+                    <a class="btn btn--red" href="#opk-newin">Shop New In</a>
+                    <a class="btn btn--line" href="#opk-drop">Preview Drop 02</a>
+                </div>
+                <p class="opk-hero__trust"><span>Ships in <span data-cfg="dispatch"></span></span><i>✦</i><span><span
+                            data-cfg="returnsDays"></span>-day returns</span><i>✦</i><span>4 × with Afterpay</span></p>
+            </div>
+        </section>
+
+        <!-- 3 · usp -->
+        <section id="opk-usp" class="wrap">
+            <div class="opk-usp">
+                <div><svg class="ic">
+                        <use href="#i-aus" />
+                    </svg>
+                    <div><b>Designed in AU</b><span>Bold prints, local attitude</span></div>
+                </div>
+                <div><svg class="ic">
+                        <use href="#i-star" />
+                    </svg>
+                    <div><b>Heavyweight cotton</b><span>Built to outlast the trend</span></div>
+                </div>
+                <div><svg class="ic">
+                        <use href="#i-truck" />
+                    </svg>
+                    <div><b>Fast dispatch</b><span><span data-cfg="dispatch"></span> via Australia Post</span></div>
+                </div>
+                <div><svg class="ic">
+                        <use href="#i-ret" />
+                    </svg>
+                    <div><b><span data-cfg="returnsDays"></span>-day returns</b><span>Quick &amp; hassle-free</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4 · new in -->
+        <section id="opk-newin" class="sec wrap">
+            <div class="sec-head">
+                <div><span class="eyebrow">Just landed</span>
+                    <h2 class="h2">New In — Oversized Collection</h2>
+                </div>
+                <div class="rail-nav"><button data-prev aria-label="Previous"><svg class="ic">
+                            <use href="#i-arrow" style="transform:rotate(180deg)" />
+                        </svg></button><button data-next aria-label="Next"><svg class="ic">
+                            <use href="#i-arrow" />
+                        </svg></button></div>
+            </div>
+            <div class="rail-wrap">
+                <div class="rail" id="rail-newin"></div>
+            </div>
+        </section>
+
+        <!-- 5 · drop 02 -->
+        <section id="opk-drop" class="opk-drop">
+            <div class="wrap opk-drop__grid">
+                <div>
+                    <span class="eyebrow">Next drop — loading</span>
+                    <h2 class="h2">Drop 02 is coming.<br>The name drops soon.</h2>
+                    <p class="sub">Waitlist gets the name reveal, the first look, and 24h early access before it goes
+                        public.</p>
+                    <div class="opk-cd" data-cd>
+                        <div><b data-cd-d>30</b><span>days</span></div>
+                        <div><b data-cd-h>00</b><span>hrs</span></div>
+                        <div><b data-cd-m>00</b><span>min</span></div>
+                        <div><b data-cd-s>00</b><span>sec</span></div>
+                    </div>
+                    <form class="opk-drop__form" data-mock data-ok="You’re on the waitlist ✓">
+                        <input type="email" placeholder="Your email" aria-label="Email"><button
+                            class="btn btn--red">Join the Waitlist</button>
+                    </form>
+                    <p class="opk-drop__micro">No spam. One email when it drops.</p>
+                    <a class="opk-drop__link" href="#">How drops work →</a>
+                </div>
+                <div class="opk-drop__locks">
+                    <figure class="opk-lock"><img src="assets/img/drop/drop-locked-01.jpg" alt=""><span><svg class="ic">
+                                <use href="#i-lock" />
+                            </svg>Locked — Notify Me</span></figure>
+                    <figure class="opk-lock"><img src="assets/img/drop/drop-locked-02.jpg" alt=""><span><svg class="ic">
+                                <use href="#i-lock" />
+                            </svg>Locked — Notify Me</span></figure>
+                    <figure class="opk-lock"><img src="assets/img/drop/drop-locked-03.jpg" alt=""><span><svg class="ic">
+                                <use href="#i-lock" />
+                            </svg>Locked — Notify Me</span></figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6 · words -->
+        <div id="opk-words" class="opk-marquee opk-marquee--words" aria-hidden="true">
+            <div class="opk-marquee__track">
+                <span>Wear Loud</span><i>✦</i><span>Play Hard</span><i>✦</i><span>Street
+                    Vibes</span><i>✦</i><span>Opicko Australia</span><i>✦</i>
+            </div>
+        </div>
+
+        <!-- 7 · collections bento -->
+        <section id="opk-collections" class="sec wrap">
+            <div class="sec-head">
+                <div><span class="eyebrow">Bold prints. Endless style.</span>
+                    <h2 class="h2">Our Collections</h2>
+                </div><a class="chip" href="#">All Collections →</a>
+            </div>
+            <div class="opk-bento">
+                <a class="opk-tile opk-tile--l" href="#"><img loading="lazy"
+                        src="assets/img/collections/collection-afl-legends.jpg" alt=""><span class="opk-tile__label">AFL
+                        Legends</span></a>
+                <a class="opk-tile opk-tile--l" href="#"><img loading="lazy"
+                        src="assets/img/collections/collection-bondi-beach.jpg" alt=""><span
+                        class="opk-tile__label">Bondi Beach</span></a>
+                <a class="opk-tile" href="#"><img loading="lazy" src="assets/img/collections/collection-heritage.jpg"
+                        alt=""><span class="opk-tile__label">Heritage</span></a>
+                <a class="opk-tile" href="#"><img loading="lazy" src="assets/img/collections/collection-immortal.jpg"
+                        alt=""><span class="opk-tile__label">Immortal</span></a>
+                <a class="opk-tile" href="#"><img loading="lazy" src="assets/img/collections/collection-no-mercy.jpg"
+                        alt=""><span class="opk-tile__label">No Mercy</span></a>
+                <a class="opk-tile" href="#"><img loading="lazy" src="assets/img/collections/collection-marina-soul.jpg"
+                        alt=""><span class="opk-tile__label">Marina Soul</span></a>
+                <a class="opk-tile opk-tile--wide" href="#"><img loading="lazy"
+                        src="assets/img/collections/collection-fitness-culture.jpg" alt=""><span
+                        class="opk-tile__label">Fitness Culture</span></a>
+                <a class="opk-tile opk-tile--ink opk-tile--wide" href="#">View All Collections <i>→</i></a>
+            </div>
+        </section>
+
+        <!-- 8 · category toggle -->
+        <section id="opk-cats" class="sec wrap">
+            <div class="sec-head">
+                <div><span class="eyebrow">Shop by category</span>
+                    <h2 class="h2">Pick Your Lane</h2>
+                </div>
+            </div>
+            <div class="opk-tabs" role="tablist">
+                <button class="is-active" data-tab="tees">T-Shirts</button>
+                <button data-tab="hoodies">Hoodies</button>
+                <button disabled>Next: Accessories</button>
+            </div>
+            <div class="opk-cats__pane rail-wrap" id="pane-tees">
+                <div class="rail" id="rail-tees"></div>
+            </div>
+            <div class="opk-cats__pane rail-wrap" id="pane-hoodies" hidden>
+                <div class="rail" id="rail-hoodies"></div>
+            </div>
+        </section>
+
+        <!-- 9 · spotlight -->
+        <section id="opk-spotlight" class="opk-spot">
+            <img loading="lazy" src="assets/img/look/look-everyday.jpg"
+                alt="Two models in Heritage and Born To Ride tees">
+            <div class="opk-spot__copy">
+                <h2 class="h2">Built for the Everyday.</h2>
+                <p class="sub">Clean silhouettes. Premium comfort. Effortless style.</p>
+                <a class="btn btn--line" href="#">Shop the Look</a>
+            </div>
+            <button class="opk-spot__hot" style="--x:34%;--y:46%">+<span class="opk-spot__chip">Heritage —
+                    <b>AU$35</b></span></button>
+            <button class="opk-spot__hot" style="--x:56%;--y:52%">+<span class="opk-spot__chip">Born To Ride —
+                    <b>AU$35</b></span></button>
+            <div class="opk-spot__fallback"><span class="chip">Heritage — AU$35</span><span class="chip">Born To Ride —
+                    AU$35</span></div>
+        </section>
+
+        <!-- 10 · best -->
+        <section id="opk-best" class="sec wrap">
+            <div class="sec-head">
+                <div><span class="eyebrow">Proof over hype</span>
+                    <h2 class="h2">Most Wanted</h2>
+                </div>
+                <div class="rail-nav"><button data-prev aria-label="Previous"><svg class="ic">
+                            <use href="#i-arrow" style="transform:rotate(180deg)" />
+                        </svg></button><button data-next aria-label="Next"><svg class="ic">
+                            <use href="#i-arrow" />
+                        </svg></button></div>
+            </div>
+            <div class="rail-wrap">
+                <div class="rail" id="rail-best"></div>
+            </div>
+        </section>
+
+        <!-- 11 · quality -->
+        <section id="opk-quality" class="sec wrap opk-split">
+            <div>
+                <span class="eyebrow">Quality that stays</span>
+                <h2 class="h2">Styles that speak.<br>Quality that stays.</h2>
+                <ul class="opk-bullets">
+                    <li>Heavyweight cotton that holds its shape, wash after wash.</li>
+                    <li>High-quality prints — breathable fabric, long-lasting wear.</li>
+                    <li>Stocked in Australia — dispatched in <span data-cfg="dispatch"></span>.</li>
+                </ul>
+                <div class="opk-fit"><svg class="ic">
+                        <use href="#i-ruler" />
+                    </svg>
+                    <div><b>Oversized fit</b><span>Runs true to oversized. Size down for a regular fit.</span></div>
+                </div>
+                <a class="btn btn--ink" href="#">Size Guide</a>
+            </div>
+            <div class="opk-macros">
+                <img loading="lazy" src="assets/img/quality/macro-print.jpg" alt="Back print close-up">
+                <img loading="lazy" src="assets/img/quality/macro-fabric.jpg" alt="Fabric close-up">
+                <img loading="lazy" src="assets/img/quality/macro-hem.jpg" alt="Stitching close-up">
+            </div>
+        </section>
+
+
+
+        <!-- 13 · ugc -->
+        <section id="opk-ugc" class="sec wrap">
+            <div class="sec-head">
+                <div><span class="eyebrow">@opicko — tag us</span>
+                    <h2 class="h2">Worn Loud Across AU</h2>
+                </div><a class="chip" href="#">Follow</a>
+            </div>
+            <div class="opk-ugc__grid">
+                <img loading="lazy" src="assets/img/ugc/ugc-01.jpg" alt=""><img loading="lazy"
+                    src="assets/img/ugc/ugc-02.jpg" alt="">
+                <img loading="lazy" src="assets/img/ugc/ugc-03.jpg" alt=""><img loading="lazy"
+                    src="assets/img/ugc/ugc-04.jpg" alt="">
+                <img loading="lazy" src="assets/img/ugc/ugc-05.jpg" alt=""><img loading="lazy"
+                    src="assets/img/ugc/ugc-06.jpg" alt="">
+            </div>
+            <p class="opk-ugc__proof"><span class="stars">★★★★★</span> Review slot reserved — stars light up when the
+                Drop 01 crew checks in.</p>
+        </section>
+
+        <!-- 14 · faq -->
+        <section id="opk-faq" class="sec wrap">
+            <div class="sec-head">
+                <div><span class="eyebrow">We’ve got your back</span>
+                    <h2 class="h2">Questions, Answered</h2>
+                </div>
+            </div>
+            <div class="opk-faq">
+                <details open>
+                    <summary>How fast will I get my order?</summary>
+                    <p>Orders dispatch within <span data-cfg="dispatch"></span> from our Australian warehouse via
+                        Australia Post with tracking. Express delivery is available at checkout.</p>
+                </details>
+                <details>
+                    <summary>What if the size isn’t right?</summary>
+                    <p><span data-cfg="returnsDays"></span>-day returns — quick &amp; hassle-free. No stress, our team’s
+                        here to help.</p>
+                </details>
+                <details>
+                    <summary>How does the oversized fit run?</summary>
+                    <p>True to oversized. Size down for a regular fit. Between sizes? Check the size guide on any
+                        product page.</p>
+                </details>
+                <details>
+                    <summary>What payment options do you accept?</summary>
+                    <p>Afterpay, Zip, all major cards, Apple Pay and Google Pay.</p>
+                </details>
+                <details>
+                    <summary>How do drops work?</summary>
+                    <p>Waitlist members get the name reveal, first look and 24h early access. When a drop sells out,
+                        it’s gone.</p>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <!-- 15 · footer -->
+    <footer id="opk-footer" class="opk-footer">
+        <div class="wrap">
+            <div class="opk-footer__cap">
+                <div>
+                    <h3>Get 10% off your first order</h3>
+                    <p>Plus drop alerts before anyone else.</p>
+                </div>
+                <form data-mock data-ok="Check your inbox for 10% off ✓"><input type="email" placeholder="Your email"
+                        aria-label="Email"><button class="btn btn--red">Sign Up</button></form>
+            </div>
+            <div class="opk-footer__cols">
+                <div>
+                    <h4>Shop</h4><a href="#opk-newin">New In</a><a href="#opk-cats">T-Shirts</a><a
+                        href="#opk-cats">Hoodies</a><a href="#opk-collections">Collections</a><a href="#opk-drop">Drop
+                        02</a>
+                </div>
+                <div>
+                    <h4>Help</h4><a href="#">Delivery &amp; Returns</a><a href="#">Size Guide</a><a href="#">Track
+                        Order</a><a href="#opk-faq">FAQ</a><a href="#">Contact</a>
+                </div>
+
+                <div>
+                    <h4>Social</h4><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">TikTok</a>
+                </div>
+            </div>
+        </div>
+        <div class="opk-footer__word" aria-hidden="true">Opicko</div>
+        <div class="wrap opk-footer__base">
+            <span>© 2025 Opicko Australia · Wear Loud</span>
+            <div class="opk-pay"><span class="ap">AFTERPAY</span><span
+                    class="ap">ZIP</span><span>VISA</span><span>MASTERCARD</span><span>AMEX</span><span>APPLE
+                    PAY</span><span>G PAY</span></div>
+        </div>
+    </footer>
+
+    <!-- bag drawer + toast -->
+    <div class="opk-veil" id="opk-veil"></div>
+    <aside class="opk-drawer" id="opk-drawer" aria-label="Your bag">
+        <h3 class="h2" id="bagItems" style="font-size:22px">YOUR BAG (0)</h3>
+        <p class="sub">Your bag is empty. <span id="bagShip"></span></p>
+        <a class="btn btn--ink" href="#opk-newin"
+            onclick="document.getElementById('opk-drawer').classList.remove('is-open');document.getElementById('opk-veil').classList.remove('is-on')">Shop
+            New In</a>
+    </aside>
+    <div class="opk-toast" id="opk-toast" role="status"></div>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

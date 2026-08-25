@@ -1,0 +1,46 @@
+/* ============ OPICKO DESIGN TOKENS ============ */
+:root {
+    --ink: #0B0B0C;
+    --paper: #F7F5F1;
+    --sand: #E5D9CC;
+    --line: #E3DED4;
+    --mut: #6D6A64;
+    --brand: #027371;
+    /* primary accent — badges, CTAs, prices, links */
+    --brand-hi: #4FB3AC;
+    /* lighter tint for text/accents ON dark surfaces (contrast) */
+    --font-disp: 'Opicko Display', 'Anton', 'Archivo Black', Impact, sans-serif;
+    --font-body: 'Opicko Body', 'Manrope', 'Inter', system-ui, sans-serif;
+    --fs-micro: 11px;
+    --fs-meta: 13px;
+    --s1: 4px;
+    --s2: 8px;
+    --s3: 12px;
+    --s4: 16px;
+    --s5: 24px;
+    --s6: 32px;
+    --s7: 48px;
+    --s8: 72px;
+    --s9: 110px;
+    --pad: clamp(16px, 4vw, 40px);
+    --wrap: 1320px;
+    --r: 4px;
+    --ease: cubic-bezier(.22, .61, .36, 1);
+    --dur: .35s;
+    --ar-card: 3/4;
+    --ar-wide: 16/9;
+    --ar-43: 4/3;
+    --ar-11: 1/1;
+}
+
+@font-face {
+    font-family: 'Opicko Display';
+    src: url('../assets/fonts/display.woff2') format('woff2');
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Opicko Body';
+    src: url('../assets/fonts/body.woff2') format('woff2');
+    font-display: swap
+}

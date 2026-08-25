@@ -1,9 +1,8 @@
-/* reset, buttons, chips, card base, utilities */
 /* ============ BASE ============ */
 *,
 *::before,
 *::after {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 body,
@@ -13,12 +12,12 @@ h3,
 h4,
 p,
 figure {
-    margin: 0
+    margin: 0;
 }
 
 img {
     display: block;
-    max-width: 100%
+    max-width: 100%;
 }
 
 button {
@@ -26,38 +25,38 @@ button {
     color: inherit;
     background: none;
     border: 0;
-    cursor: pointer
+    cursor: pointer;
 }
 
 a {
     color: inherit;
-    text-decoration: none
+    text-decoration: none;
 }
 
 html {
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
 }
 
 body {
     background: var(--paper);
     color: var(--ink);
     font: 400 16px/1.6 var(--font-body);
-    -webkit-font-smoothing: antialiased
+    -webkit-font-smoothing: antialiased;
 }
 
 :focus-visible {
-    outline: 2px solid var(--red);
-    outline-offset: 3px
+    outline: 2px solid var(--brand);
+    outline-offset: 3px;
 }
 
 .wrap {
     max-width: var(--wrap);
     margin-inline: auto;
-    padding-inline: var(--pad)
+    padding-inline: var(--pad);
 }
 
 .sec {
-    padding-block: var(--s8)
+    padding-block: var(--s8);
 }
 
 .ic {
@@ -68,7 +67,7 @@ body {
     stroke-width: 1.7;
     stroke-linecap: round;
     stroke-linejoin: round;
-    flex: none
+    flex: none;
 }
 
 /* type primitives */
@@ -76,7 +75,7 @@ body {
     font: 700 var(--fs-micro)/1 var(--font-body);
     letter-spacing: .24em;
     text-transform: uppercase;
-    color: var(--red)
+    color: var(--brand);
 }
 
 .h2 {
@@ -84,13 +83,13 @@ body {
     text-transform: uppercase;
     font-size: clamp(28px, 4.2vw, 46px);
     line-height: 1.02;
-    margin: 10px 0 0
+    margin: 10px 0 0;
 }
 
 .sub {
     color: var(--mut);
     max-width: 52ch;
-    margin-top: 12px
+    margin-top: 12px;
 }
 
 .sec-head {
@@ -98,7 +97,7 @@ body {
     align-items: flex-end;
     justify-content: space-between;
     gap: 16px;
-    margin-bottom: var(--s5)
+    margin-bottom: var(--s5);
 }
 
 /* buttons & chips */
@@ -112,30 +111,25 @@ body {
     text-transform: uppercase;
     padding: 17px 28px;
     border-radius: var(--r);
-    transition: transform .2s var(--ease), background .2s
+    transition: transform .2s var(--ease), background .2s;
 }
 
 .btn:hover {
-    transform: translateY(-2px)
+    transform: translateY(-2px);
 }
 
-.btn--red {
-    background: var(--red);
-    color: #fff
+.btn--brand {
+    background: var(--brand);
+    color: #fff;
 }
 
 .btn--ink {
     background: var(--ink);
-    color: #fff
-}
-
-.btn--teal {
-    background: var(--teal);
-    color: #fff
+    color: #fff;
 }
 
 .btn--line {
-    border: 1px solid currentColor
+    border: 1px solid currentColor;
 }
 
 .chip {
@@ -147,14 +141,14 @@ body {
     text-transform: uppercase;
     padding: 8px 12px;
     border: 1px solid var(--line);
-    border-radius: var(--r)
+    border-radius: var(--r);
 }
 
 /* marquee */
 .opk-marquee {
     overflow: hidden;
     background: var(--ink);
-    color: #fff
+    color: #fff;
 }
 
 .opk-marquee__track {
@@ -165,7 +159,7 @@ body {
     font: 700 var(--fs-micro)/1 var(--font-body);
     letter-spacing: .2em;
     text-transform: uppercase;
-    animation: mq 30s linear infinite
+    animation: mq 30s linear infinite;
 }
 
 .opk-marquee--words .opk-marquee__track {
@@ -173,23 +167,23 @@ body {
     font-size: clamp(26px, 4.6vw, 52px);
     letter-spacing: .04em;
     padding: 20px 0;
-    animation-duration: 40s
+    animation-duration: 40s;
 }
 
 .opk-marquee--words i {
-    color: var(--red);
-    font-style: normal
+    color: var(--brand-hi);
+    font-style: normal;
 }
 
 @keyframes mq {
     to {
-        transform: translateX(-50%)
+        transform: translateX(-50%);
     }
 }
 
 /* rails (scroll-snap, no library) */
 .rail-wrap {
-    position: relative
+    position: relative;
 }
 
 .rail {
@@ -199,20 +193,20 @@ body {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
-    padding: 4px 2px
+    padding: 4px 2px;
 }
 
 .rail::-webkit-scrollbar {
-    display: none
+    display: none;
 }
 
 .rail>* {
-    scroll-snap-align: start
+    scroll-snap-align: start;
 }
 
 .rail-nav {
     display: flex;
-    gap: 8px
+    gap: 8px;
 }
 
 .rail-nav button {
@@ -222,23 +216,23 @@ body {
     border-radius: 50%;
     display: grid;
     place-items: center;
-    transition: .2s
+    transition: .2s;
 }
 
 .rail-nav button:hover {
     background: var(--ink);
     color: #fff;
-    border-color: var(--ink)
+    border-color: var(--ink);
 }
 
 .rail-nav .ic {
     width: 16px;
-    height: 16px
+    height: 16px;
 }
 
 /* ============ PRODUCT CARD (the one template) ============ */
 .opk-card {
-    width: 286px
+    width: 286px;
 }
 
 .opk-card__media {
@@ -246,7 +240,7 @@ body {
     aspect-ratio: var(--ar-card);
     background: var(--sand);
     overflow: hidden;
-    border-radius: var(--r)
+    border-radius: var(--r);
 }
 
 .opk-card__media img {
@@ -255,16 +249,16 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: opacity .35s var(--ease)
+    transition: opacity .35s var(--ease);
 }
 
 .opk-card__img--back {
-    opacity: 0
+    opacity: 0;
 }
 
 .opk-card:hover .opk-card__img--back,
 .opk-card:focus-within .opk-card__img--back {
-    opacity: 1
+    opacity: 1;
 }
 
 .opk-badge {
@@ -275,17 +269,17 @@ body {
     width: 46px;
     height: 46px;
     border-radius: 50%;
-    background: var(--red);
+    background: var(--brand);
     color: #fff;
     display: grid;
     place-items: center;
     font: 700 9px/1.1 var(--font-body);
     letter-spacing: .12em;
-    text-align: center
+    text-align: center;
 }
 
 .opk-badge--ink {
-    background: var(--ink)
+    background: var(--ink);
 }
 
 .opk-card__wish {
@@ -294,12 +288,12 @@ body {
     right: 12px;
     z-index: 2;
     color: #fff;
-    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, .5))
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, .5));
 }
 
 .opk-card__wish.is-on .ic {
-    fill: var(--red);
-    stroke: var(--red)
+    fill: var(--brand);
+    stroke: var(--brand);
 }
 
 .opk-quick {
@@ -308,21 +302,21 @@ body {
     right: 0;
     bottom: 0;
     z-index: 2;
-    background: var(--teal);
+    background: var(--brand);
     color: #fff;
     transform: translateY(102%);
     transition: transform .3s var(--ease);
-    padding: 10px 12px
+    padding: 10px 12px;
 }
 
 .opk-card:hover .opk-quick,
 .opk-card:focus-within .opk-quick {
-    transform: none
+    transform: none;
 }
 
-@media (hover:none) {
+@media (hover: none) {
     .opk-quick {
-        transform: none
+        transform: none;
     }
 }
 
@@ -330,12 +324,12 @@ body {
     display: block;
     font: 700 10px/1 var(--font-body);
     letter-spacing: .2em;
-    margin-bottom: 8px
+    margin-bottom: 8px;
 }
 
 .opk-quick__sizes {
     display: flex;
-    gap: 6px
+    gap: 6px;
 }
 
 .opk-quick__sizes button {
@@ -345,30 +339,30 @@ body {
     border-radius: var(--r);
     font: 700 11px/1 var(--font-body);
     color: #fff;
-    transition: .15s
+    transition: .15s;
 }
 
 .opk-quick__sizes button:hover,
 .opk-quick__sizes button.is-added {
     background: #fff;
-    color: var(--teal)
+    color: var(--brand);
 }
 
 .opk-card__info {
-    padding: 12px 2px 0
+    padding: 12px 2px 0;
 }
 
 .opk-card__info h3 {
     font: 700 13px/1.3 var(--font-body);
     letter-spacing: .1em;
-    text-transform: uppercase
+    text-transform: uppercase;
 }
 
 .opk-card__rate {
     font-size: 12px;
     letter-spacing: 2px;
     color: var(--line);
-    margin: 4px 0 2px
+    margin: 4px 0 2px;
 }
 
 .opk-card__rate em {
@@ -377,33 +371,33 @@ body {
     letter-spacing: .08em;
     font-size: var(--fs-micro);
     text-transform: uppercase;
-    margin-left: 6px
+    margin-left: 6px;
 }
 
 .opk-card__price {
     font-weight: 800;
-    color: var(--teal);
-    font-size: 14px
+    color: var(--brand);
+    font-size: 14px;
 }
 
 .opk-card__bnpl {
     color: var(--mut);
     font-weight: 500;
     font-size: 12px;
-    margin-left: 8px
+    margin-left: 8px;
 }
 
 .opk-card__swatches {
     display: flex;
     gap: 6px;
-    margin-top: 8px
+    margin-top: 8px;
 }
 
 .opk-card__swatches i {
     width: 13px;
     height: 13px;
     border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, .2)
+    border: 1px solid rgba(0, 0, 0, .2);
 }
 
 /* toast / veil / drawer */
@@ -422,12 +416,12 @@ body {
     text-transform: uppercase;
     padding: 15px 22px;
     border-radius: var(--r);
-    transition: .3s var(--ease)
+    transition: .3s var(--ease);
 }
 
 .opk-toast.is-on {
     transform: translate(-50%, 0);
-    opacity: 1
+    opacity: 1;
 }
 
 .opk-veil {
@@ -437,12 +431,12 @@ body {
     background: rgba(0, 0, 0, .5);
     opacity: 0;
     pointer-events: none;
-    transition: .3s
+    transition: .3s;
 }
 
 .opk-veil.is-on {
     opacity: 1;
-    pointer-events: auto
+    pointer-events: auto;
 }
 
 .opk-drawer {
@@ -458,23 +452,23 @@ body {
     transition: transform .4s var(--ease);
     display: flex;
     flex-direction: column;
-    gap: 14px
+    gap: 14px;
 }
 
 .opk-drawer.is-open {
-    transform: none
+    transform: none;
 }
 
-@media (prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: reduce) {
 
     *,
     *::before,
     *::after {
         animation: none !important;
-        transition: none !important
+        transition: none !important;
     }
 
     html {
-        scroll-behavior: auto
+        scroll-behavior: auto;
     }
 }

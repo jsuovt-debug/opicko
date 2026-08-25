@@ -109,7 +109,7 @@
                 <p class="sub">Premium oversized streetwear. Designed in Australia. Stocked in Australia. Built for the
                     everyday.</p>
                 <div class="opk-hero__ctas">
-                    <a class="btn btn--red" href="#opk-newin">Shop New In</a>
+                    <a class="btn btn--brand" href="#opk-newin">Shop New In</a>
                     <a class="btn btn--line" href="#opk-drop">Preview Drop 02</a>
                 </div>
                 <p class="opk-hero__trust"><span>Ships in <span data-cfg="dispatch"></span></span><i>✦</i><span><span
@@ -175,9 +175,9 @@
                         <div><b data-cd-m>00</b><span>min</span></div>
                         <div><b data-cd-s>00</b><span>sec</span></div>
                     </div>
-                    <form class="opk-drop__form" data-mock data-ok="You’re on the waitlist ✓">
+                    <form class="opk-drop__form" data-mock data-ok="You're on the waitlist ✓">
                         <input type="email" placeholder="Your email" aria-label="Email"><button
-                            class="btn btn--red">Join the Waitlist</button>
+                            class="btn btn--brand">Join the Waitlist</button>
                     </form>
                     <p class="opk-drop__micro">No spam. One email when it drops.</p>
                     <a class="opk-drop__link" href="#">How drops work →</a>
@@ -311,8 +311,6 @@
             </div>
         </section>
 
-
-
         <!-- 13 · ugc -->
         <section id="opk-ugc" class="sec wrap">
             <div class="sec-head">
@@ -335,7 +333,7 @@
         <!-- 14 · faq -->
         <section id="opk-faq" class="sec wrap">
             <div class="sec-head">
-                <div><span class="eyebrow">We’ve got your back</span>
+                <div><span class="eyebrow">We've got your back</span>
                     <h2 class="h2">Questions, Answered</h2>
                 </div>
             </div>
@@ -346,8 +344,8 @@
                         Australia Post with tracking. Express delivery is available at checkout.</p>
                 </details>
                 <details>
-                    <summary>What if the size isn’t right?</summary>
-                    <p><span data-cfg="returnsDays"></span>-day returns — quick &amp; hassle-free. No stress, our team’s
+                    <summary>What if the size isn't right?</summary>
+                    <p><span data-cfg="returnsDays"></span>-day returns — quick &amp; hassle-free. No stress, our team's
                         here to help.</p>
                 </details>
                 <details>
@@ -362,7 +360,7 @@
                 <details>
                     <summary>How do drops work?</summary>
                     <p>Waitlist members get the name reveal, first look and 24h early access. When a drop sells out,
-                        it’s gone.</p>
+                        it's gone.</p>
                 </details>
             </div>
         </section>
@@ -377,7 +375,7 @@
                     <p>Plus drop alerts before anyone else.</p>
                 </div>
                 <form data-mock data-ok="Check your inbox for 10% off ✓"><input type="email" placeholder="Your email"
-                        aria-label="Email"><button class="btn btn--red">Sign Up</button></form>
+                        aria-label="Email"><button class="btn btn--brand">Sign Up</button></form>
             </div>
             <div class="opk-footer__cols">
                 <div>
@@ -389,7 +387,6 @@
                     <h4>Help</h4><a href="#">Delivery &amp; Returns</a><a href="#">Size Guide</a><a href="#">Track
                         Order</a><a href="#opk-faq">FAQ</a><a href="#">Contact</a>
                 </div>
-
                 <div>
                     <h4>Social</h4><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">TikTok</a>
                 </div>
@@ -397,7 +394,7 @@
         </div>
         <div class="opk-footer__word" aria-hidden="true">Opicko</div>
         <div class="wrap opk-footer__base">
-            <span>© 2025 Opicko Australia · Wear Loud</span>
+            <span>© 2026 Opicko Australia · Wear Loud</span>
             <div class="opk-pay"><span class="ap">AFTERPAY</span><span
                     class="ap">ZIP</span><span>VISA</span><span>MASTERCARD</span><span>AMEX</span><span>APPLE
                     PAY</span><span>G PAY</span></div>
@@ -408,10 +405,21 @@
     <div class="opk-veil" id="opk-veil"></div>
     <aside class="opk-drawer" id="opk-drawer" aria-label="Your bag">
         <h3 class="h2" id="bagItems" style="font-size:22px">YOUR BAG (0)</h3>
-        <p class="sub">Your bag is empty. <span id="bagShip"></span></p>
-        <a class="btn btn--ink" href="#opk-newin"
-            onclick="document.getElementById('opk-drawer').classList.remove('is-open');document.getElementById('opk-veil').classList.remove('is-on')">Shop
-            New In</a>
+        <div id="bagItemsList">
+            <p class="sub" id="bagEmpty">Your bag is empty.</p>
+        </div>
+        <div class="opk-ship">
+            <div class="opk-ship__bar"><i id="shipBar"></i></div>
+            <p id="shipMsg"></p>
+        </div>
+        <a class="btn btn--brand" href="#">Checkout (Demo)</a>
+        <button id="clearBag"
+            style="margin-top:8px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);text-decoration:underline">Clear
+            Bag</button>
+        <a class="btn btn--line" href="#opk-newin" style="margin-top:4px"
+            onclick="document.getElementById('opk-drawer').classList.remove('is-open');document.getElementById('opk-veil').classList.remove('is-on')">
+            Continue Shopping
+        </a>
     </aside>
     <div class="opk-toast" id="opk-toast" role="status"></div>
 

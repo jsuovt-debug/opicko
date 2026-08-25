@@ -219,17 +219,21 @@
         el.style.transitionDelay = (i % 8) * 60 + 'ms';
         io.observe(el);
     });
-})();
 
+    /* ---- clear bag handler (must be inside IIFE to access bag/total/renderShip) ---- */
+    $('#clearBag')?.addEventListener('click', () => {
+        bag = 0;
+        total = 0;
+        if (bagEl) bagEl.textContent = '0';
+        if (list) list.innerHTML = '<p class="sub" id="bagEmpty">Your bag is empty.</p>';
+        const bagTitle = $('#bagItems');
+        if (bagTitle) bagTitle.textContent = 'YOUR BAG (0)';
+        renderShip();
+        toast('Bag cleared');
+    });
 
-$('#clearBag')?.addEventListener('click', () => {
-    bag = 0; total = 0;
-    if (bagEl) bagEl.textContent = '0';
-    if (list) list.innerHTML = '<p class="sub" id="bagEmpty">Your bag is empty.</p>';
-    if ($('#bagItems')) $('#bagItems').textContent = 'YOUR BAG (0)';
-    renderShip();
-    toast('Bag cleared');
-});
+    /* ---- dynamic year ---- */
+    const yearEl = document.querySelector('.opk-footer__base span');
+    if (yearEl) yearEl.innerHTML = yearEl.innerHTML.replace('2025', new Date().getFullYear());
 
-const yearEl = document.querySelector('.opk-footer__base span');
-if (yearEl) yearEl.innerHTML = yearEl.innerHTML.replace('2025', new Date().getFullYear());
+})(); // END OF IIFE
